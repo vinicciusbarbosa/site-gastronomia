@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o blog Sabor & Arte.">
+    <title>Contatos | Sabor & Arte</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <p class="logo">Sabor &amp; Arte</p>
+            <p class="subtitulo">a gastronomia em cada detalhe</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="cozinhas-do-mundo.html">Cozinhas do Mundo</a></li>
+                <li><a href="restaurantes.html">Restaurantes</a></li>
+                <li><a href="contatos.html" class="ativo">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Fale Conosco</h1>
+            <p>
+                Tem uma sugestão de receita, quer indicar um restaurante ou apenas trocar uma ideia
+                sobre gastronomia? Preencha o formulário abaixo que responderemos o quanto antes.
+            </p>
+        </section>
+
+        <form class="formulario" action="#" method="post">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="campo">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Sobre o que deseja falar?">
+            </div>
+            <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+            <button type="submit" class="botao">Enviar mensagem</button>
+        </form>
+
+        <section class="contato-info">
+            <p><strong>E-mail:</strong> contato@saborearte.com.br</p>
+            <p><strong>Telefone:</strong> (00) 0000-0000</p>
+            <p><strong>Endereço:</strong> Rua das Especiarias, 123 — Centro</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sabor &amp; Arte — Blog de Gastronomia.</p>
+        <p>Projeto acadêmico. Fale conosco pela página de <a href="contatos.html">Contatos</a>.</p>
+    </footer>
+</body>
+</html>

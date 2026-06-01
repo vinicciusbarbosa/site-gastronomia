@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Ilustração de globo representando cozinhas do mundo">
+  <rect width="600" height="400" fill="#2980b9"/>
+  <rect width="600" height="400" fill="url(#g2)" opacity="0.35"/>
+  <defs>
+    <radialGradient id="g2" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+  <!-- globo -->
+  <circle cx="300" cy="190" r="120" fill="#27ae60"/>
+  <circle cx="300" cy="190" r="120" fill="none" stroke="#fdf6ec" stroke-width="6"/>
+  <!-- meridianos -->
+  <g fill="none" stroke="#fdf6ec" stroke-width="3" opacity="0.8">
+    <ellipse cx="300" cy="190" rx="48" ry="120"/>
+    <ellipse cx="300" cy="190" rx="95" ry="120"/>
+    <line x1="180" y1="190" x2="420" y2="190"/>
+    <path d="M195 140 q105 -30 210 0"/>
+    <path d="M195 240 q105 30 210 0"/>
+  </g>
+  <!-- continentes -->
+  <path d="M250 130 q30 -10 50 10 q10 20 -10 30 q-30 5 -40 -15 z" fill="#f1c40f"/>
+  <path d="M320 200 q40 -5 45 25 q-5 30 -35 25 q-25 -20 -10 -50 z" fill="#e67e22"/>
+  <text x="300" y="360" font-family="Georgia, serif" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">Cozinhas do Mundo</text>
+</svg>

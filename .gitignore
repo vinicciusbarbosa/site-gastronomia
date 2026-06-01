@@ -1,0 +1,14 @@
+# Pastas de ferramentas / editor
+.claude/
+.claire/
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Logs e temporários
+*.log
+*.tmp
