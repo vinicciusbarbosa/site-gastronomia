@@ -72,3 +72,4 @@ Em seguida, abra o arquivo `index.html` no navegador (duplo clique) e navegue pe
 ## 👤 Autor
 
 Desenvolvido por **Vinícius Barbosa** como projeto da disciplina de Frontend.
+<img width="7087" height="2362" alt="Versao_horizontal_fundo_amarelo_PNG-01" src="https://github.com/user-attachments/assets/5ddb4fdf-e2f7-42de-85f4-e97088d3900d" />
