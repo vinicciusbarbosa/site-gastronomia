@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Receitas testadas e explicadas passo a passo no blog Sabor & Arte.">
-    <title>Receitas | Sabor & Arte</title>
+    <meta name="description" content="Receitas testadas e explicadas passo a passo no Culinary Journey.">
+    <title>Receitas | Culinary Journey</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="topo">
-            <p class="logo">Sabor &amp; Arte</p>
-            <p class="subtitulo">a gastronomia em cada detalhe</p>
+            <a href="index.html" class="logo-link">
+                <span class="logo-nome">Culinary <span class="logo-script">Journey</span></span>
+                <span class="logo-tag">receitas do mundo, sabores sem fronteiras</span>
+            </a>
         </div>
         <nav>
             <ul>
@@ -25,74 +27,109 @@
     </header>
 
     <main>
-        <img src="img/receitas.svg" alt="Prato com talheres" class="banner-pagina">
-
-        <section class="hero">
+        <section class="hero-banner hero-receitas">
+            <div class="linha"></div>
             <h1>Receitas</h1>
             <p>
-                Receitas pensadas para qualquer cozinha: ingredientes fáceis de encontrar,
-                passo a passo claro e dicas para acertar de primeira. Escolha uma e mãos à obra!
+                Ingredientes fáceis de encontrar, passo a passo claro e dicas para acertar
+                de primeira. Escolha uma e mãos à obra!
             </p>
         </section>
 
-        <article>
-            <h3>Macarrão alho e óleo</h3>
-            <p>Um clássico rápido para qualquer dia da semana. Pronto em 20 minutos.</p>
-            <p><strong>Ingredientes:</strong></p>
-            <ul>
-                <li>300 g de espaguete</li>
-                <li>4 dentes de alho fatiados</li>
-                <li>4 colheres de sopa de azeite</li>
-                <li>Sal, pimenta e salsinha a gosto</li>
-            </ul>
-            <p><strong>Modo de preparo:</strong></p>
-            <ol>
-                <li>Cozinhe o macarrão em água com sal até ficar al dente.</li>
-                <li>Doure o alho no azeite em fogo baixo, sem queimar.</li>
-                <li>Misture o macarrão escorrido ao alho e óleo.</li>
-                <li>Finalize com salsinha, pimenta e sirva quente.</li>
-            </ol>
+        <article class="receita">
+            <img src="img/comidas/macarrao.png" alt="Prato de macarrão alho e óleo" class="receita-img">
+            <div class="receita-conteudo">
+                <h3>Macarrão alho e óleo</h3>
+                <p>Um clássico rápido para qualquer dia da semana.</p>
+                <div class="tags">
+                    <span class="tag">⏱️ 20 min</span>
+                    <span class="tag">🔥 Fácil</span>
+                    <span class="tag">🍽️ 2 porções</span>
+                    <label class="favoritar">
+                        <input type="checkbox">
+                        <span class="coracao">♥</span> Favoritar
+                    </label>
+                </div>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>300 g de espaguete</li>
+                    <li>4 dentes de alho fatiados</li>
+                    <li>4 colheres de sopa de azeite</li>
+                    <li>Sal, pimenta e salsinha a gosto</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                    <li>Cozinhe o macarrão em água com sal até ficar al dente.</li>
+                    <li>Doure o alho no azeite em fogo baixo, sem queimar.</li>
+                    <li>Misture o macarrão escorrido ao alho e óleo.</li>
+                    <li>Finalize com salsinha, pimenta e sirva quente.</li>
+                </ol>
+            </div>
         </article>
 
-        <article>
-            <h3>Omelete recheada</h3>
-            <p>Proteica e versátil: ótima para o café da manhã reforçado ou um almoço leve.</p>
-            <p><strong>Ingredientes:</strong></p>
-            <ul>
-                <li>3 ovos</li>
-                <li>Queijo e presunto a gosto</li>
-                <li>Tomate e cebola picados</li>
-                <li>Sal e orégano a gosto</li>
-            </ul>
-            <p><strong>Modo de preparo:</strong></p>
-            <ol>
-                <li>Bata os ovos com o sal e despeje na frigideira untada.</li>
-                <li>Quando começar a firmar, adicione o recheio em metade da omelete.</li>
-                <li>Dobre ao meio, deixe dourar e sirva.</li>
-            </ol>
+        <article class="receita">
+            <img src="img/comidas/omelete-recheada.jpg" alt="Omelete recheada dourada" class="receita-img">
+            <div class="receita-conteudo">
+                <h3>Omelete recheada</h3>
+                <p>Proteica e versátil: ótima para o café da manhã reforçado ou um almoço leve.</p>
+                <div class="tags">
+                    <span class="tag">⏱️ 10 min</span>
+                    <span class="tag">🔥 Fácil</span>
+                    <span class="tag">🍽️ 1 porção</span>
+                    <label class="favoritar">
+                        <input type="checkbox">
+                        <span class="coracao">♥</span> Favoritar
+                    </label>
+                </div>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>3 ovos</li>
+                    <li>Queijo e presunto a gosto</li>
+                    <li>Tomate e cebola picados</li>
+                    <li>Sal e orégano a gosto</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                    <li>Bata os ovos com o sal e despeje na frigideira untada.</li>
+                    <li>Quando começar a firmar, adicione o recheio em metade da omelete.</li>
+                    <li>Dobre ao meio, deixe dourar e sirva.</li>
+                </ol>
+            </div>
         </article>
 
-        <article>
-            <h3>Brownie de chocolate</h3>
-            <p>Sobremesa densa e úmida, com casquinha crocante por cima.</p>
-            <p><strong>Ingredientes:</strong></p>
-            <ul>
-                <li>200 g de chocolate meio amargo</li>
-                <li>150 g de manteiga</li>
-                <li>2 ovos e 1 xícara de açúcar</li>
-                <li>1 xícara de farinha de trigo</li>
-            </ul>
-            <p><strong>Modo de preparo:</strong></p>
-            <ol>
-                <li>Derreta o chocolate com a manteiga em banho-maria.</li>
-                <li>Bata os ovos com o açúcar e junte ao chocolate.</li>
-                <li>Incorpore a farinha e leve ao forno a 180 °C por 25 minutos.</li>
-            </ol>
+        <article class="receita">
+            <img src="img/comidas/brownie-chocolate.jpg" alt="Brownie de chocolate cortado em pedaços" class="receita-img">
+            <div class="receita-conteudo">
+                <h3>Brownie de chocolate</h3>
+                <p>Sobremesa densa e úmida, com casquinha crocante por cima.</p>
+                <div class="tags">
+                    <span class="tag">⏱️ 40 min</span>
+                    <span class="tag">🔥 Médio</span>
+                    <span class="tag">🍽️ 8 porções</span>
+                    <label class="favoritar">
+                        <input type="checkbox">
+                        <span class="coracao">♥</span> Favoritar
+                    </label>
+                </div>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>200 g de chocolate meio amargo</li>
+                    <li>150 g de manteiga</li>
+                    <li>2 ovos e 1 xícara de açúcar</li>
+                    <li>1 xícara de farinha de trigo</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                    <li>Derreta o chocolate com a manteiga em banho-maria.</li>
+                    <li>Bata os ovos com o açúcar e junte ao chocolate.</li>
+                    <li>Incorpore a farinha e leve ao forno a 180 °C por 25 minutos.</li>
+                </ol>
+            </div>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 Sabor &amp; Arte — Blog de Gastronomia.</p>
+        <p>&copy; 2026 Culinary Journey — receitas do mundo, sabores sem fronteiras.</p>
         <p>Projeto acadêmico. Fale conosco pela página de <a href="contatos.html">Contatos</a>.</p>
     </footer>
 </body>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Ilustração de fachada de restaurante">
+  <defs>
+    <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0913f"/>
+      <stop offset="100%" stop-color="#d96a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#rg)"/>
+  <rect x="160" y="150" width="280" height="200" fill="#fff3e2"/>
+  <path d="M140 150 l320 0 l-22 54 l-276 0 z" fill="#c0392b"/>
+  <g fill="#fff3e2">
+    <path d="M140 150 l40 0 l-3 54 l-40 0 z"/>
+    <path d="M220 150 l40 0 l-8 54 l-40 0 z"/>
+    <path d="M300 150 l40 0 l-13 54 l-40 0 z"/>
+    <path d="M380 150 l40 0 l-18 54 l-40 0 z"/>
+  </g>
+  <rect x="272" y="250" width="56" height="100" fill="#d96a2e"/>
+  <circle cx="318" cy="300" r="4" fill="#e0a44a"/>
+  <rect x="190" y="240" width="52" height="52" fill="#e0a44a"/>
+  <rect x="358" y="240" width="52" height="52" fill="#e0a44a"/>
+</svg>

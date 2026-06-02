@@ -1,68 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com o blog Sabor & Arte.">
-    <title>Contatos | Sabor & Arte</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contato com o Culinary Journey."
+    />
+    <title>Contatos | Culinary Journey</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header>
-        <div class="topo">
-            <p class="logo">Sabor &amp; Arte</p>
-            <p class="subtitulo">a gastronomia em cada detalhe</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="receitas.html">Receitas</a></li>
-                <li><a href="cozinhas-do-mundo.html">Cozinhas do Mundo</a></li>
-                <li><a href="restaurantes.html">Restaurantes</a></li>
-                <li><a href="contatos.html" class="ativo">Contatos</a></li>
-            </ul>
-        </nav>
+      <div class="topo">
+        <a href="index.html" class="logo-link">
+          <span class="logo-nome"
+            >Culinary <span class="logo-script">Journey</span></span
+          >
+          <span class="logo-tag"
+            >receitas do mundo, sabores sem fronteiras</span
+          >
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="receitas.html">Receitas</a></li>
+          <li><a href="cozinhas-do-mundo.html">Cozinhas do Mundo</a></li>
+          <li><a href="restaurantes.html">Restaurantes</a></li>
+          <li><a href="contatos.html" class="ativo">Contatos</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Fale Conosco</h1>
-            <p>
-                Tem uma sugestão de receita, quer indicar um restaurante ou apenas trocar uma ideia
-                sobre gastronomia? Preencha o formulário abaixo que responderemos o quanto antes.
-            </p>
-        </section>
+      <section class="hero-banner hero-contatos">
+        <div class="linha"></div>
+        <h1>Vamos conversar? 🍴</h1>
+        <p>
+          Adoramos receber mensagens de quem ama cozinhar e comer bem. Conte pra
+          gente o que você está pensando!
+        </p>
+      </section>
 
+      <p class="contato-intro">
+        Tem uma sugestão de receita, quer indicar aquele restaurante imperdível
+        ou só dizer um oi? Preencha o formulário ou use uma das outras formas de
+        contato. Costumamos responder em até <strong>2 dias úteis</strong>. 😊
+      </p>
+
+      <div class="contato-grid">
         <form class="formulario" action="#" method="post">
-            <div class="campo">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-            </div>
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-            </div>
-            <div class="campo">
-                <label for="assunto">Assunto</label>
-                <input type="text" id="assunto" name="assunto" placeholder="Sobre o que deseja falar?">
-            </div>
-            <div class="campo">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
-            </div>
-            <button type="submit" class="botao">Enviar mensagem</button>
+          <div class="campo">
+            <label for="nome">Seu nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Como podemos te chamar?"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="email">Seu e-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+          <div class="campo">
+            <label for="assunto">Sobre o que você quer falar?</label>
+            <select id="assunto" name="assunto">
+              <option value="receita">Sugestão de receita</option>
+              <option value="restaurante">Indicação de restaurante</option>
+              <option value="elogio">Elogio ou feedback</option>
+              <option value="duvida">Dúvida</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Sua mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Escreva aqui o que quiser contar pra gente..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="botao">Enviar mensagem</button>
         </form>
 
-        <section class="contato-info">
-            <p><strong>E-mail:</strong> contato@saborearte.com.br</p>
-            <p><strong>Telefone:</strong> (00) 0000-0000</p>
-            <p><strong>Endereço:</strong> Rua das Especiarias, 123 — Centro</p>
-        </section>
+        <aside class="contato-lateral">
+          <h2>Outras formas de falar conosco</h2>
+
+          <div class="contato-item">
+            <span class="ico">✉️</span>
+            <span>
+              <strong>E-mail</strong>
+              contato@culinaryjourney.com.br
+            </span>
+          </div>
+          <div class="contato-item">
+            <span class="ico">📱</span>
+            <span>
+              <strong>WhatsApp</strong>
+              (00) 90000-0000
+            </span>
+          </div>
+          <div class="contato-item">
+            <span class="ico">📍</span>
+            <span>
+              <strong>Endereço</strong>
+              Rua das Especiarias, 123 — Centro
+            </span>
+          </div>
+          <div class="contato-item">
+            <span class="ico">🕘</span>
+            <span>
+              <strong>Atendimento</strong>
+              Seg. a sex., das 9h às 18h
+            </span>
+          </div>
+
+          <div class="redes">
+            <a class="rede" href="#">📷 Instagram</a>
+            <a class="rede" href="#">👍 Facebook</a>
+            <a class="rede" href="#">▶️ YouTube</a>
+          </div>
+        </aside>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Sabor &amp; Arte — Blog de Gastronomia.</p>
-        <p>Projeto acadêmico. Fale conosco pela página de <a href="contatos.html">Contatos</a>.</p>
+      <p>
+        &copy; 2026 Culinary Journey — receitas do mundo, sabores sem
+        fronteiras.
+      </p>
+      <p>
+        Projeto acadêmico. Fale conosco pela página de
+        <a href="contatos.html">Contatos</a>.
+      </p>
     </footer>
-</body>
+  </body>
 </html>

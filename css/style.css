@@ -1,17 +1,19 @@
 /* ===========================================================
-   Sabor & Arte - Blog de Gastronomia
-   Estilos globais
+   Culinary Journey - Blog de Gastronomia
+   Receitas do mundo, sabores sem fronteiras
    =========================================================== */
 
 :root {
-    --cor-fundo: #fdf6ec;
-    --cor-texto: #3a2e25;
-    --cor-destaque: #c0392b;
-    --cor-destaque-escuro: #962d22;
-    --cor-secundaria: #e67e22;
+    --cor-fundo: #fff8ef;
+    --cor-texto: #4a3527;
+    --cor-primaria: #ef7d34;
+    --cor-primaria-escura: #d2641c;
+    --cor-gold: #e0a44a;
+    --cor-gold-escuro: #b9802f;
     --cor-clara: #ffffff;
-    --cor-borda: #e8dccb;
-    --sombra: 0 4px 14px rgba(58, 46, 37, 0.12);
+    --cor-borda: #f0e2cf;
+    --cor-suave: #fdeede;
+    --sombra: 0 4px 16px rgba(210, 100, 28, 0.12);
     --fonte-titulo: Georgia, 'Times New Roman', serif;
     --fonte-texto: 'Segoe UI', Tahoma, Arial, sans-serif;
 }
@@ -29,38 +31,53 @@ body {
     line-height: 1.7;
 }
 
-/* ----------------------- Cabeçalho ----------------------- */
+/* ----------------------- Cabeçalho e logo (texto) ----------------------- */
 
 header {
     background-color: var(--cor-clara);
-    border-bottom: 3px solid var(--cor-destaque);
+    border-bottom: 3px solid var(--cor-gold);
     box-shadow: var(--sombra);
 }
 
 .topo {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px 20px 12px;
     text-align: center;
+    padding: 22px 20px 12px;
 }
 
-.logo {
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo-nome {
+    display: block;
     font-family: var(--fonte-titulo);
-    font-size: 2.4rem;
-    color: var(--cor-destaque);
+    font-size: 2.6rem;
+    font-weight: 700;
     letter-spacing: 1px;
+    line-height: 1.1;
+    color: var(--cor-primaria-escura);
 }
 
-.subtitulo {
-    font-size: 0.95rem;
-    color: var(--cor-secundaria);
-    font-style: italic;
+.logo-script {
+    font-family: 'Brush Script MT', 'Segoe Script', cursive;
+    font-weight: 400;
+    color: var(--cor-gold);
+}
+
+.logo-tag {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cor-gold-escuro);
 }
 
 /* ----------------------- Navegação ----------------------- */
 
 nav {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-primaria);
 }
 
 nav ul {
@@ -72,13 +89,9 @@ nav ul {
     justify-content: center;
 }
 
-nav li {
-    flex: 0 1 auto;
-}
-
 nav a {
     display: block;
-    padding: 14px 22px;
+    padding: 15px 24px;
     color: var(--cor-clara);
     text-decoration: none;
     font-weight: 600;
@@ -87,12 +100,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--cor-destaque-escuro);
+    background-color: var(--cor-primaria-escura);
 }
 
 nav a.ativo {
-    background-color: var(--cor-destaque-escuro);
-    border-bottom: 3px solid var(--cor-secundaria);
+    background-color: var(--cor-primaria-escura);
+    border-bottom: 3px solid var(--cor-gold);
 }
 
 /* ----------------------- Conteúdo principal ----------------------- */
@@ -103,102 +116,179 @@ main {
     padding: 40px 20px;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.hero h1 {
+h2 {
     font-family: var(--fonte-titulo);
-    font-size: 2.2rem;
-    color: var(--cor-texto);
-    margin-bottom: 16px;
+    font-size: 1.9rem;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 26px;
+    text-align: center;
 }
 
-.hero p {
-    max-width: 750px;
-    margin: 0 auto;
+.intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 50px;
     font-size: 1.1rem;
 }
 
-h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 1.8rem;
-    color: var(--cor-destaque);
-    margin-bottom: 24px;
+/* ----------------------- Banner / hero por página (CSS) ----------------------- */
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    padding: 66px 28px;
+    margin-bottom: 44px;
     text-align: center;
+    color: var(--cor-clara);
+    box-shadow: var(--sombra);
 }
 
-/* ----------------------- Cards de destaque (Home) ----------------------- */
+/* textura sutil de pontos sobre o gradiente */
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.18) 1px, transparent 0);
+    background-size: 22px 22px;
+    pointer-events: none;
+}
+
+.hero-banner .linha {
+    width: 70px;
+    height: 3px;
+    background: var(--cor-clara);
+    border-radius: 2px;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-banner h1 {
+    position: relative;
+    z-index: 1;
+    font-family: var(--fonte-titulo);
+    font-size: 2.6rem;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner p {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1.12rem;
+}
+
+/* gradiente quente próprio de cada seção */
+.hero-home {
+    background: linear-gradient(135deg, #f6a623 0%, #ef7d34 100%);
+}
+
+.hero-receitas {
+    background: linear-gradient(135deg, #f59331 0%, #e85d2a 100%);
+}
+
+.hero-cozinhas {
+    background: linear-gradient(135deg, #f6b13c 0%, #ef8327 100%);
+}
+
+.hero-restaurantes {
+    background: linear-gradient(135deg, #f0913f 0%, #d96a2e 100%);
+}
+
+.hero-contatos {
+    background: linear-gradient(135deg, #f8b94f 0%, #ef8a36 100%);
+}
+
+/* ----------------------- Destaques da Home (tiles com imagem-link) ----------------------- */
 
 .destaques {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 24px;
     justify-content: center;
 }
 
-.card {
-    background-color: var(--cor-clara);
-    border: 1px solid var(--cor-borda);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--sombra);
+.destaque {
+    position: relative;
     flex: 1 1 300px;
     max-width: 340px;
-    transition: transform 0.2s ease;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    text-decoration: none;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card a img {
+.destaque img {
     width: 100%;
-    height: 210px;
+    height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-.card-corpo {
-    padding: 20px;
+.destaque:hover img {
+    transform: scale(1.06);
 }
 
-.card-corpo h3 {
+.destaque-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 22px 20px 20px;
+    color: var(--cor-clara);
+    background: linear-gradient(to top, rgba(74, 53, 39, 0.92), rgba(74, 53, 39, 0));
+}
+
+.destaque-info h3 {
     font-family: var(--fonte-titulo);
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-    color: var(--cor-destaque-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 4px;
 }
 
-.card-corpo p {
-    font-size: 0.97rem;
+.destaque-info p {
+    font-size: 0.92rem;
 }
 
-/* ----------------------- Páginas de conteúdo ----------------------- */
+/* ----------------------- Chamada para contato (Home) ----------------------- */
 
-.banner-pagina {
-    width: 100%;
-    max-height: 320px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 32px;
-    box-shadow: var(--sombra);
+.cta-contato {
+    margin-top: 54px;
+    padding: 42px 28px;
+    text-align: center;
+    background-color: var(--cor-suave);
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
 }
+
+.cta-contato h2 {
+    margin-bottom: 12px;
+}
+
+.cta-contato p {
+    max-width: 620px;
+    margin: 0 auto 24px;
+}
+
+/* ----------------------- Artigos (páginas de conteúdo) ----------------------- */
 
 article {
     background-color: var(--cor-clara);
     border: 1px solid var(--cor-borda);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 28px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     box-shadow: var(--sombra);
 }
 
 article h3 {
     font-family: var(--fonte-titulo);
-    color: var(--cor-destaque);
-    font-size: 1.4rem;
+    color: var(--cor-primaria-escura);
+    font-size: 1.45rem;
     margin-bottom: 12px;
 }
 
@@ -215,12 +305,131 @@ article li {
     margin-bottom: 6px;
 }
 
+/* etiquetas com ícone (tempo, dificuldade, tipo, etc.) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 13px;
+    background-color: var(--cor-suave);
+    color: var(--cor-primaria-escura);
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* botão favoritar (toggle só com CSS) */
+.favoritar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+}
+
+.favoritar input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.favoritar .coracao {
+    font-size: 1.4rem;
+    color: #cbb9a8;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.favoritar:hover .coracao {
+    color: #ef9a86;
+}
+
+.favoritar input:checked ~ .coracao {
+    color: #e74c3c;
+    transform: scale(1.2);
+}
+
+/* ----------------------- Receitas (foto + conteúdo) ----------------------- */
+
+.receita {
+    display: flex;
+    gap: 26px;
+    align-items: flex-start;
+}
+
+.receita-img {
+    width: 250px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: var(--sombra);
+}
+
+.receita-conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ----------------------- Cozinhas do mundo (bandeiras) ----------------------- */
+
+.pais-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.pais-cabecalho h3 {
+    margin-bottom: 0;
+}
+
+.bandeira {
+    width: 46px;
+    height: 31px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------- Restaurantes ----------------------- */
+
+.restaurante-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.restaurante-cabecalho h3 {
+    margin-bottom: 0;
+}
+
+.nota {
+    padding: 4px 13px;
+    background-color: var(--cor-suave);
+    color: var(--cor-gold-escuro);
+    border-radius: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
 /* ----------------------- Formulário de contato ----------------------- */
 
 .formulario {
     background-color: var(--cor-clara);
     border: 1px solid var(--cor-borda);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 28px;
     max-width: 600px;
     margin: 0 auto;
@@ -238,13 +447,23 @@ article li {
 }
 
 .campo input,
-.campo textarea {
+.campo textarea,
+.campo select {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--cor-borda);
     border-radius: 6px;
     font-family: var(--fonte-texto);
     font-size: 1rem;
+    background-color: var(--cor-clara);
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(239, 125, 52, 0.22);
 }
 
 .campo textarea {
@@ -253,38 +472,110 @@ article li {
 }
 
 .botao {
-    background-color: var(--cor-destaque);
+    display: inline-block;
+    background-color: var(--cor-primaria);
     color: var(--cor-clara);
     border: none;
-    padding: 12px 28px;
+    padding: 13px 32px;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .botao:hover {
-    background-color: var(--cor-destaque-escuro);
+    background-color: var(--cor-primaria-escura);
 }
 
-.contato-info {
-    max-width: 600px;
-    margin: 28px auto 0;
+/* layout da página de contatos: formulário + painel lateral */
+.contato-intro {
     text-align: center;
+    max-width: 700px;
+    margin: 0 auto 32px;
+    font-size: 1.08rem;
 }
 
-.contato-info p {
-    margin-bottom: 6px;
+.contato-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.contato-grid .formulario {
+    flex: 1 1 360px;
+    margin: 0;
+    max-width: none;
+}
+
+.contato-lateral {
+    flex: 1 1 280px;
+    background-color: var(--cor-suave);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.contato-lateral h2 {
+    text-align: left;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.contato-item .ico {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.contato-item strong {
+    display: block;
+}
+
+.contato-item span {
+    font-size: 0.95rem;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.rede {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 15px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.rede:hover {
+    background-color: var(--cor-primaria-escura);
 }
 
 /* ----------------------- Rodapé ----------------------- */
 
 footer {
-    background-color: var(--cor-texto);
-    color: #f0e6d8;
+    background-color: #b9602b;
+    color: #fdeede;
     text-align: center;
-    padding: 28px 20px;
+    padding: 30px 20px;
     margin-top: 40px;
 }
 
@@ -294,7 +585,7 @@ footer p {
 }
 
 footer a {
-    color: var(--cor-secundaria);
+    color: #ffe2b8;
     text-decoration: none;
 }
 
@@ -304,17 +595,26 @@ footer a:hover {
 
 /* ----------------------- Responsivo ----------------------- */
 
-@media (max-width: 600px) {
-    .logo {
-        font-size: 1.9rem;
-    }
-
+@media (max-width: 680px) {
     nav a {
-        padding: 12px 14px;
+        padding: 12px 16px;
         font-size: 0.9rem;
     }
 
-    .hero h1 {
-        font-size: 1.7rem;
+    .hero-banner {
+        padding: 48px 20px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+
+    .receita {
+        flex-direction: column;
+    }
+
+    .receita-img {
+        width: 100%;
+        height: 220px;
     }
 }
